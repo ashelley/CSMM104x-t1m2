@@ -12,6 +12,12 @@ void SpringForce::addEnergyToTotal( const VectorXs& x, const VectorXs& v, const 
     
 
   // Add milestone 2 code here.
+
+  #if DEBUG_MODE    
+    printf("hello world");  
+  #endif    
+    
+  printf("hello world");      
 }
 
 void SpringForce::addGradEToTotal( const VectorXs& x, const VectorXs& v, const VectorXs& m, VectorXs& gradE )
@@ -29,17 +35,24 @@ void SpringForce::addGradEToTotal( const VectorXs& x, const VectorXs& v, const V
     printf("endpoint 2: %d\n", m_endpoints.second); 
   #endif
     
-    int indexX1 = m_endpoints.first * 2;
-    int indexY1 = indexX1 + 1;
+  int indexX1 = m_endpoints.first * 2;
+  int indexY1 = indexX1 + 1;
     
-    int indexX2 = m_endpoints.second * 2;
-    int indexY2 = indexX2 + 1;
+  int indexX2 = m_endpoints.second * 2;
+  int indexY2 = indexX2 + 1;
     
-    scalar x1 = x[indexX1];
-    scalar y1 = x[indexY1];
+  scalar x1 = x[indexX1];
+  scalar y1 = x[indexY1];
                   
-    scalar x2 = x[indexX2];
-    scalar y2 = x[indexY2];  
+  scalar x2 = x[indexX2];
+  scalar y2 = x[indexY2];  
+    
+  scalar velocityX1 = v[indexX1];
+  scalar velocityY1 = v[indexY1];
+    
+  scalar velocityX2 = v[indexX2];
+  scalar velocityY2 = v[indexY2];
+    
     
   #if DEBUG_MODE    
     printf("x1,x2: %.4f,%.4f\n", x1,y1);  
@@ -70,13 +83,32 @@ void SpringForce::addGradEToTotal( const VectorXs& x, const VectorXs& v, const V
   #endif    
     
   scalar gradientX = m_k * (lengthV - m_l0) * nx;
-  scalar gradientY = m_k * (lengthV - m_l0) * ny;
-  
-  gradE[indexX1] -= gradientX;
-  gradE[indexY1] -= gradientY;
+  scalar gradientY = m_k * (lengthV - m_l0) * ny;   
     
-  gradE[indexX2] += gradientX;
-  gradE[indexY2] += gradientY;    
+  scalar BnX = m_b * nx;
+  scalar BnY = m_b * ny;
+  
+  scalar velocityDeltaX = (velocityX1 - velocityX2);
+  scalar velocityDeltaY = (velocityY1 - velocityY2);
+    
+  scalar dotted = (BnX * velocityDeltaX) + (BnY * velocityDeltaY);
+            
+  scalar dampingX = nx * dotted;  
+  scalar dampingY = ny * dotted;
+    
+  #if DEBUG_MODE
+    printf("B: %.4f\n", m_b);      
+    printf("velocity1: %.4f,%.4f\n", velocityX1,velocityY1);
+    printf("velocity2: %.4f,%.4f\n", velocityX2,velocityY2);
+    printf("dampingX: %.4f\n", dampingX);
+    printf("dampingY: %.4f\n", dampingY);
+  #endif
+  
+  gradE[indexX1] -= (gradientX - dampingX);
+  gradE[indexY1] -= (gradientY - dampingY);
+    
+  gradE[indexX2] += (gradientX - dampingX);
+  gradE[indexY2] += (gradientY - dampingY);    
     
   #if DEBUG_MODE  
     printf("energy gradientX,Y: %.4f,%.4f\n", gradientX, gradientY);  
