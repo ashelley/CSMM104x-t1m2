@@ -478,57 +478,33 @@ stddef.h
 
 ../include/eigen/Eigen/src/plugins/MatrixCwiseUnaryOps.h
 
-/home/codio/workspace/FOSSSim/DragDampingForce.cpp
-DragDampingForce.h
-/home/codio/workspace/FOSSSim/DragDampingForce.h
-
-/home/codio/workspace/FOSSSim/DragDampingForce.h
-Eigen/Core
--
+/home/codio/workspace/FOSSSim/DebugHelpers.h
 iostream
 -
-Force.h
-/home/codio/workspace/FOSSSim/Force.h
-MathDefs.h
-/home/codio/workspace/FOSSSim/MathDefs.h
-
-/home/codio/workspace/FOSSSim/Force.cpp
-Force.h
-/home/codio/workspace/FOSSSim/Force.h
+Eigen/Core
+-
 
 /home/codio/workspace/FOSSSim/Force.h
 Eigen/Core
 -
 MathDefs.h
 /home/codio/workspace/FOSSSim/MathDefs.h
-
-/home/codio/workspace/FOSSSim/GravitationalForce.cpp
-GravitationalForce.h
-/home/codio/workspace/FOSSSim/GravitationalForce.h
-
-/home/codio/workspace/FOSSSim/GravitationalForce.h
-Eigen/Core
--
-Force.h
-/home/codio/workspace/FOSSSim/Force.h
-iostream
--
 
 /home/codio/workspace/FOSSSim/MathDefs.h
 Eigen/Core
 -
 Eigen/StdVector
 -
-
-/home/codio/workspace/FOSSSim/SceneStepper.h
-TwoDScene.h
-/home/codio/workspace/FOSSSim/TwoDScene.h
-MathDefs.h
-/home/codio/workspace/FOSSSim/MathDefs.h
 
 /home/codio/workspace/FOSSSim/SpringForce.cpp
+stdio.h
+-
+math.h
+-
 SpringForce.h
 /home/codio/workspace/FOSSSim/SpringForce.h
+DebugHelpers.h
+/home/codio/workspace/FOSSSim/DebugHelpers.h
 
 /home/codio/workspace/FOSSSim/SpringForce.h
 Eigen/Core
@@ -537,20 +513,4 @@ Force.h
 /home/codio/workspace/FOSSSim/Force.h
 iostream
 -
-
-/home/codio/workspace/FOSSSim/SymplecticEuler.cpp
-SymplecticEuler.h
-/home/codio/workspace/FOSSSim/SymplecticEuler.h
-
-/home/codio/workspace/FOSSSim/SymplecticEuler.h
-SceneStepper.h
-/home/codio/workspace/FOSSSim/SceneStepper.h
-
-/home/codio/workspace/FOSSSim/TwoDScene.h
-Eigen/Core
--
-Eigen/StdVector
--
-Force.h
-/home/codio/workspace/FOSSSim/Force.h
 
