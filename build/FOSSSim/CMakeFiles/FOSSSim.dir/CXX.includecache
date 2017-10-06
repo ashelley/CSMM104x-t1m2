@@ -490,6 +490,24 @@ Eigen/Core
 MathDefs.h
 /home/codio/workspace/FOSSSim/MathDefs.h
 
+/home/codio/workspace/FOSSSim/GravitationalForce.cpp
+stdio.h
+-
+math.h
+-
+GravitationalForce.h
+/home/codio/workspace/FOSSSim/GravitationalForce.h
+DebugHelpers.h
+/home/codio/workspace/FOSSSim/DebugHelpers.h
+
+/home/codio/workspace/FOSSSim/GravitationalForce.h
+Eigen/Core
+-
+Force.h
+/home/codio/workspace/FOSSSim/Force.h
+iostream
+-
+
 /home/codio/workspace/FOSSSim/MathDefs.h
 Eigen/Core
 -

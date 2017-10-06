@@ -8,7 +8,7 @@ void SpringForce::addEnergyToTotal( const VectorXs& x, const VectorXs& v, const 
   assert( x.size() == v.size() );
   assert( x.size()%2 == 0 );
   assert( m_endpoints.first >= 0 );  assert( m_endpoints.first < x.size()/2 );
-  assert( m_endpoints.second >= 0 ); assert( m_endpoints.second < x.size()/2 );
+  assert( m_endpoints.second >= 0 ); assert( m_endpoints.second < x.size()/2 );   
     
 
   // Add milestone 2 code here.
@@ -21,6 +21,8 @@ void SpringForce::addGradEToTotal( const VectorXs& x, const VectorXs& v, const V
   assert( x.size()%2 == 0 );
   assert( m_endpoints.first >= 0 );  assert( m_endpoints.first < x.size()/2 );
   assert( m_endpoints.second >= 0 ); assert( m_endpoints.second < x.size()/2 );
+    
+  // Add milestone 2 code here.
     
   #if DEBUG_MODE    
     printf("endpoint 1: %d\n", m_endpoints.first);  
@@ -81,5 +83,4 @@ void SpringForce::addGradEToTotal( const VectorXs& x, const VectorXs& v, const V
     printf("energy gradientX,Y: %.4f,%.4f\n", gradientX, gradientY);  
   #endif      
 
-  // Add milestone 2 code here.
 }

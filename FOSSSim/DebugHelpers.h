@@ -4,7 +4,7 @@
 #include <iostream>
 #include <Eigen/Core>
 
-#define DEBUG_MODE 1
+#define DEBUG_MODE 0
 
 
 static Eigen::IOFormat MATRIX_CLEANFORMAT(4, 0, ", ", "\n", "[", "]");
