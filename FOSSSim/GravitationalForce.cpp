@@ -13,7 +13,6 @@ void GravitationalForce::addEnergyToTotal( const VectorXs& x, const VectorXs& v,
 
   // Add milestone 2 code here.
 
-  printf("hello world 2"); 
 }
 
 void GravitationalForce::addGradEToTotal( const VectorXs& x, const VectorXs& v, const VectorXs& m, VectorXs& gradE )

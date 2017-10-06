@@ -1,9 +1,9 @@
 FILE(REMOVE_RECURSE
-  "CMakeFiles/FOSSSim.dir/DragDampingForce.cpp.o"
-  "CMakeFiles/FOSSSim.dir/GravitationalForce.cpp.o"
   "CMakeFiles/FOSSSim.dir/Force.cpp.o"
   "CMakeFiles/FOSSSim.dir/SymplecticEuler.cpp.o"
   "CMakeFiles/FOSSSim.dir/SpringForce.cpp.o"
+  "CMakeFiles/FOSSSim.dir/GravitationalForce.cpp.o"
+  "CMakeFiles/FOSSSim.dir/DragDampingForce.cpp.o"
   "FOSSSim.pdb"
   "FOSSSim"
 )
