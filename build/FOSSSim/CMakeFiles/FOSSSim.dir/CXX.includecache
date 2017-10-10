@@ -532,6 +532,12 @@ Eigen/Core
 Eigen/StdVector
 -
 
+/home/codio/workspace/FOSSSim/SceneStepper.h
+TwoDScene.h
+/home/codio/workspace/FOSSSim/TwoDScene.h
+MathDefs.h
+/home/codio/workspace/FOSSSim/MathDefs.h
+
 /home/codio/workspace/FOSSSim/SpringForce.cpp
 stdio.h
 -
@@ -549,4 +555,26 @@ Force.h
 /home/codio/workspace/FOSSSim/Force.h
 iostream
 -
+
+/home/codio/workspace/FOSSSim/SymplecticEuler.cpp
+stdio.h
+-
+math.h
+-
+SymplecticEuler.h
+/home/codio/workspace/FOSSSim/SymplecticEuler.h
+DebugHelpers.h
+/home/codio/workspace/FOSSSim/DebugHelpers.h
+
+/home/codio/workspace/FOSSSim/SymplecticEuler.h
+SceneStepper.h
+/home/codio/workspace/FOSSSim/SceneStepper.h
+
+/home/codio/workspace/FOSSSim/TwoDScene.h
+Eigen/Core
+-
+Eigen/StdVector
+-
+Force.h
+/home/codio/workspace/FOSSSim/Force.h
 
